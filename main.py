@@ -111,7 +111,7 @@ if __name__ == '__main__':
     if not df.empty:
         print("\n--- Scraped Data ---")
         print(df)
-        df.to_csv('edgecombe_parcels_data.csv', index=False)
+        # df.to_csv('edgecombe_parcels_data.csv', index=False)
         print(f"\nSuccessfully scraped {len(df)} records.")
     else:
         print("No data was scraped.")

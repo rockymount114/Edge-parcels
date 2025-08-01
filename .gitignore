@@ -1,1 +1,5 @@
 venv/
+*.csv
+nash_data/
+*.zip
+nash.py
