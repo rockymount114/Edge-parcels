@@ -7,4 +7,5 @@ dependencies = [
     "requests>=2.32.4",
     "simpledbf>=0.2.6",
     "sqlalchemy>=2.0.42",
+    "python-dotenv==1.1.1",
 ]
