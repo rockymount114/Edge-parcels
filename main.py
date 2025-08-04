@@ -17,8 +17,8 @@ def get_data_from_db(sql_instance, sql_db, table_name):
     return df
 
 if __name__ == "__main__":
-    sql_instance_name = os.getenv("SQL_INSTANCE_NAME")
-    sql_db_name = os.getenv("SQL_DB_NAME")
+    sql_instance_name = os.getenv("TS_INSTANCE_NAME")
+    sql_db_name = os.getenv("TS_SQL_DB_NAME")
 
     # Get Nash data
     nash_df = get_data_from_db(sql_instance_name, sql_db_name, 'nash_parcels')

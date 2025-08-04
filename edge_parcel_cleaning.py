@@ -23,9 +23,9 @@ def clean_edgecombe_data():
 
 if __name__ == "__main__":
     # Configuration from .env file
-    sql_instance = os.getenv("SQL_INSTANCE_NAME")
-    sql_db = os.getenv("SQL_DB_NAME")
-    table = os.getenv("TABLE_NAME")
+    sql_instance = os.getenv("TS_INSTANCE_NAME")
+    sql_db = os.getenv("TS_SQL_DB_NAME")
+    table = os.getenv("TS_TABLE_NAME")
 
     # Operations
     cleaned_df = clean_edgecombe_data()
