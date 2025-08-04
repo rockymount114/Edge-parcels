@@ -17,15 +17,19 @@ def get_data_from_db(sql_instance, sql_db, table_name):
     return df
 
 if __name__ == "__main__":
-    sql_instance_name = os.getenv("TS_INSTANCE_NAME")
-    sql_db_name = os.getenv("TS_SQL_DB_NAME")
+    # sql_instance_name = os.getenv("TS_INSTANCE_NAME")
+    # sql_db_name = os.getenv("TS_SQL_DB_NAME")
 
-    # Get Nash data
-    nash_df = get_data_from_db(sql_instance_name, sql_db_name, 'nash_parcels')
-    print("\nNash Data:")
-    print(nash_df.head())
+    # # Get Nash data
+    # nash_df = get_data_from_db(sql_instance_name, sql_db_name, 'nash_parcels')
+    # print("\nNash Data:")
+    # print(nash_df.head())
 
-    # Get Edgecombe data
-    edge_df = get_data_from_db(sql_instance_name, sql_db_name, 'edgecombe_parcels')
-    print("\nEdgecombe Data:")
-    print(edge_df.head())
+    # # Get Edgecombe data
+    # edge_df = get_data_from_db(sql_instance_name, sql_db_name, 'edgecombe_parcels')
+    # print("\nEdgecombe Data:")
+    # print(edge_df.head())
+    
+    from DB import get_munis_parcels, get_munis_customer
+    get_munis_parcels()
+    get_munis_customer()

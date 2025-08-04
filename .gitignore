@@ -1,5 +1,9 @@
+__pycache__/
 venv/
 *.csv
 nash_data/
 *.zip
 # nash.py
+
+
+*.csv

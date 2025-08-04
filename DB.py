@@ -132,7 +132,8 @@ def get_munis_customer():
             if df[col].dtype == 'object':
                 df[col] = df[col].str.strip()
             
-        df.to_csv(os.path.join(current_dir, 'munis_customer.csv'), index=False)
+        df.to_csv(os.path.join(current_dir, 'munis_customer.csv'), index=False, encoding='utf-8')
+        logger.info(f"Data successfully saved to munis_customer.csv. Total rows: {len(df)}")
         return df
 
     except Exception as e:
