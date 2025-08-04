@@ -4,6 +4,7 @@
 ## Fetch data from TS, Munis db for data cleaning
 
 1. Nash parcels
+
 TXSDIST IN ('RM00', 'RM62')
 IF OWNER1 = OWNER2, empty OWNER2
 ML_C_ST_Z split into CITY, STATE, ZIPC columns
