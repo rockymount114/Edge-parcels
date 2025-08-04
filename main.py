@@ -140,10 +140,8 @@ def splity_city(address_text):
         'FORMAT': format_type
     }
     
-
-if __name__ == "__main__":
-    
-    # Get TS data
+def nash_data_cleaning():
+     # Get TS data
     sql_instance_name = os.getenv("TS_INSTANCE_NAME")
     sql_db_name = os.getenv("TS_SQL_DB_NAME")
 
@@ -170,6 +168,10 @@ if __name__ == "__main__":
 
     nash_df.to_csv('nash_parcels_with_city.csv', index=False)
     print(nash_df.head())
+    
+if __name__ == "__main__":
+    
+    nash_data_cleaning()
     
     # # Get Edgecombe data
     # edge_df = get_data_from_db(sql_instance_name, sql_db_name, 'edgecombe_parcels')
