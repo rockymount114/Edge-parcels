@@ -27,7 +27,8 @@ def save_to_db(df, sql_instance_name, sql_db_name, table_name):
     engine = sqlalchemy.create_engine(conn_str)
 
     df.to_sql(table_name, engine, if_exists='replace', index=False)
-    print(f"\nDataFrame saved to SQL table: {table_name} in database: {sql_db_name}")
+    logger.info(f"DataFrame saved to SQL table: {table_name} in database: {sql_db_name}")
+    # print(f"\nDataFrame saved to SQL table: {table_name} in database: {sql_db_name}")
 
 
 def get_munis_parcels():
