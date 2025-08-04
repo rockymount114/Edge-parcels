@@ -150,6 +150,11 @@ if __name__ == "__main__":
     # Get Nash data
     nash_df = get_data_from_db(sql_instance_name, sql_db_name, 'nash_parcels')
     
+    nash_df = nash_df[
+        nash_df['GIS_PARID'].str.strip().str.len() > 0 & 
+        (nash_df['GIS_PARID'] != '00000')
+    ]
+        
     # Filter out rows where ML_C_ST_Z contains 'RETURNED'
     nash_df_filtered = nash_df[
         ~nash_df['ML_C_ST_Z'].str.contains('RETURNED', na=False) |
