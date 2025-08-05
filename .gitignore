@@ -4,6 +4,6 @@ venv/
 nash_data/
 *.zip
 # nash.py
-
+.env
 
 *.csv
